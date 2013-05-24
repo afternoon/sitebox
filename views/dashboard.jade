@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2 Sites
+
+  if sites.length
+    ul.sites
+      for site in sites
+        li.site= site.domain
+  else
+    p No sites
+  ul.actions
+    li
+      a(class="button", href="/add") Add a new site

@@ -1,0 +1,23 @@
+{
+  "name": "dropsite",
+  "description": "Dropbox-powered websites",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "connect": "~2.7.10",
+    "connect-memcached": "0.0.3",
+    "dbox": "*",
+    "express": "3.x",
+    "jade": "*",
+    "mongodb": "*",
+    "supervisor": "*"
+  },
+  "scripts": {
+    "manager": "supervisor -w lib -e coffee lib/manager.coffee",
+    "proxy": "supervisor -w lib -e coffee lib/proxy.coffee"
+  },
+  "subdomain": "dropsite",
+  "engines": {
+    "node": "0.8.x"
+  }
+}

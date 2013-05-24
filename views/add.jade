@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h2 Add site
+
+  form.site(method="post", action="/add")
+    .field
+      input#domain(type="text", name="domain", placeholder="Your custom domain name", autofocus="true")
+    .field
+      input#savesite(type="submit", value="Add site")

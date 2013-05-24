@@ -1,0 +1,17 @@
+module.exports =
+  manager:
+    port: process.env.MANAGER_PORT || 8000
+  proxy:
+    port: process.env.PROXY_PORT || 8001
+  secret: 'SECRETS'
+  mongodb:
+    database: 'sitebox'
+    host: process.env.MONGO_HOST || '127.0.0.1'
+    port: process.env.MONGO_PORT || 27017
+    options: {}
+  memcached:
+    hosts: '127.0.0.1:11211'
+  dropbox:
+    app_key: 'key'
+    app_secret: 'secret'
+  oauthCallback: 'http://localhost:8000/oauth/callback'
