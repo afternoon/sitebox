@@ -1,5 +1,5 @@
 {
-  "name": "dropsite",
+  "name": "sitebox",
   "description": "Dropbox-powered websites",
   "private": true,
   "version": "0.1.0",
@@ -9,15 +9,10 @@
     "dbox": "*",
     "express": "3.x",
     "jade": "*",
-    "mongodb": "*",
-    "supervisor": "*"
+    "mongodb": "*"
   },
-  "scripts": {
-    "manager": "supervisor -w lib -e coffee lib/manager.coffee",
-    "proxy": "supervisor -w lib -e coffee lib/proxy.coffee"
-  },
-  "subdomain": "dropsite",
-  "engines": {
-    "node": "0.8.x"
+  "bin": {
+    "sitebox_manager": "./lib/manager.coffee",
+    "sitebox_proxy": "./lib/proxy.coffee"
   }
 }
