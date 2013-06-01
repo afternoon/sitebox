@@ -1,8 +1,16 @@
 {
   "name": "sitebox",
   "description": "Dropbox-powered websites",
-  "private": true,
   "version": "0.1.0",
+  "author": "Ben Godfrey <ben@ben2.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afternoon/sitebox.git"
+  },
+  "keywords": [
+    "dropbox"
+  ],
+  "license": "BSD-3-Clause",
   "dependencies": {
     "connect": "~2.7.10",
     "connect-memcached": "0.0.3",
