@@ -2,11 +2,12 @@
 
 FROM ubuntu:12.04
 
-RUN apt-get update
-RUN apt-get install python-software-properties python g++ make
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get update
-RUN apt-get install nodejs
+RUN apt-get -y install build-essential libssl-dev wget
+
+RUN echo 'export NODE_PATH=/usr/local/lib/node_modules' >> ~/.bashrc
+RUN wget http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz
+RUN tar xzf node-v0.10.18.tar.gz
+RUN cd node-v0.10.18; ./configure; make install
 
 ADD ./src
 
