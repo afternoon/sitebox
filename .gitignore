@@ -1,4 +1,4 @@
 .DS_Store
 *.sw[nop]
-lib/conf.coffee
-node_modules/
+src/lib/conf.coffee
+src/node_modules/
